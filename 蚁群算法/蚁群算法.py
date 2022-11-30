@@ -117,7 +117,7 @@ class Ant(object):
         temp_distance += distance_graph[start][end]
         self.total_distance = temp_distance
 
-    # 移动操作
+    # 移动操作,参数更新
     def __move(self, next_city):
 
         self.path.append(next_city)
@@ -210,8 +210,7 @@ class TSP(object):
             y = distance_y[i]
             self.nodes.append((x, y))
             # 生成节点椭圆，半径为self.__r
-            node = self.canvas.create_oval(x - self.__r,
-                                           y - self.__r, x + self.__r, y + self.__r,
+            node = self.canvas.create_oval(x - self.__r,  y - self.__r, x + self.__r, y + self.__r,
                                            fill="#ff0000",  # 填充红色
                                            outline="#000000",  # 轮廓白色
                                            tags="node",
